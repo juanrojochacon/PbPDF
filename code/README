@@ -1,0 +1,20 @@
+
+-The main code is f2_f.
+
+This code calls mstw2008st*.f, which as a MSTW codemodified to calculate the value of F2 for p, n and nucleus A (with DSSZ and EPS09)
+
+-mstwpdf.f for MSTW pdfs.
+
+-EPS09.f  for EPS09 nPDFs.
+
+-DSSzr.f for DSSZ nPDFs.
+
+To compile: gfortran f2_juan.f DSSZr.f EPS09.f mstw2008structurefunctionsmodified.f mstwpdf.f alphaS.f 
+
+dssz*.grid are the DSSZ grids
+
+EPS09NLOR* are the grids for EPS09, where the number appearing in the name is the value of A.
+
+
+
+
