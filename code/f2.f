@@ -4,7 +4,7 @@
       double precision mc,mt,mb,asmur,mur,fr2
       integer AAA,ZZZ,ipn,i,iordmstw,pset,isetdssz,j,isetmstw
       integer dim_f2
-      parameter (dim_f2=18) !number of data of the experiment
+      parameter (dim_f2=24)
       double precision Q2_Au_139(dim_f2),X_Au_139(dim_f2),
      1                 Au_139(dim_f2),ES_Au_139(dim_f2),
      1                 EE_Au_139(dim_f2),y(dim_f2)
@@ -60,8 +60,11 @@ c      ipn=1 ! 1 = proton, 2 = neutron, 3 = nucleus DSSZ, 4 = nucleus EPS09
       
       isetdssz=0
       pset=1
-c     reading data      
-      open(20, file='nmched.data',status='unknown')
+      
+
+
+c everything
+      open(20, file='nmclid.data',status='unknown')
       read(20,*)
       read(20,*)
       do i=1,dim_f2,1
@@ -69,8 +72,8 @@ c     reading data
      1 ,ES_Au_139(i)
       enddo
       close(20)   
-      open (21,FILE='nmched_f2_2.data',STATUS='unknown')
-      open (22,FILE='nmched_f2_factor.data',STATUS='unknown')
+      open (21,FILE='nmclid_f2_2.data',STATUS='unknown')
+      open (22,FILE='nmclid_f2_factor.data',STATUS='unknown')
       
        
 c     F2 proton (mstw2008)     
@@ -132,10 +135,10 @@ c      enddo
       isetmstw=0   !central value (when calling dssz and eps, we are calling ratios so we need to multiply by the pdf central value)
 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-c     F2 nucleus A (the one we want to convert)
+c     F2 nucleus A
 
-      AAA = 4  !1 for ipn=1,2. Change if IPN=3 or IPN=4
-      ZZZ = 2 !1 for ipn=1, 0 for ipn=2. change if IPN=3 or IPN=4 
+      AAA = 6  !1 for ipn=1,2. Change if IPN=3 or IPN=4
+      ZZZ = 3 !1 for ipn=1, 0 for ipn=2. change if IPN=3 or IPN=4 
       
 c     F2 Au DSSZ
       ipn=3
@@ -191,7 +194,7 @@ c     F2 Au eps09
       enddo   
 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
-c     F2(Pb)
+c F2(Pb)
 
       AAA = 208 !  1 for ipn=1,2, change if IPN=3 or IPN=4
       ZZZ = 82  !  1 for ipn=1, 0 for ipn=2, change if IPN=3 or IPN=4
@@ -246,7 +249,7 @@ c     pset=1 central value
         ersf2pbeps09(i)=ersf2pbeps09(i)+((f2pbeps09(2*j,i)-
      1  f2pbeps09(2*j+1,i))**2.d0)
        enddo
-       erf2pbeps09(i)=dsqrt(ersf2eps09(i))/2.d0
+       erf2pbeps09(i)=dsqrt(ersf2pbeps09(i))/2.d0
       enddo 
 
 
@@ -261,13 +264,16 @@ c Final result
       enddo
 
       do i=1,dim_f2,1
+c       ersf2finaleps09(i)=0.d0
        ersfactoreps09(i)=0.d0
        do j=1,15
+c        ersf2finaleps09(i)=ersf2finaleps09(i)+((f2finaleps09(2*j,i)-
+c     1  f2finaleps09(2*j+1,i))**2.d0)
         ersfactoreps09(i)=ersfactoreps09(i)+((factoreps09(2*j,i)-
      1  factoreps09(2*j+1,i))**2.d0)
        enddo
        erfactoreps09(i)=dsqrt(ersfactoreps09(i))/2.d0
-       erf2finaleps09(i)=erfactoreps09(i)*f2finaleps09(1,i)
+       erf2finaleps09(i)=erfactoreps09(i)*Au_139(i)
        stateps09(i)=factoreps09(1,i)*EE_Au_139(i)
        systeps09(i)=factoreps09(1,i)*ES_Au_139(i)
       enddo   
@@ -280,16 +286,21 @@ c Final result
       enddo
 
       do i=1,dim_f2,1
+c       ersf2finaldssz(i)=0.d0
        ersfactordssz(i)=0.d0
        do j=1,25
-        ersfactordssz(i)=ersfactordssz(i)+((factordssz(2*j,i)-
-     1  factordssz(2*j+1,i))**2.d0)
+c        ersf2finaldssz(i)=ersf2finaldssz(i)+((f2finaldssz(j+1,i)
+c     1  -f2finaldssz(j+26,i))**2.d0)
+        ersfactordssz(i)=ersfactordssz(i)+((factordssz(j+1,i)-
+     1  factordssz(j+26,i))**2.d0)
        enddo
        erfactordssz(i)=dsqrt(ersfactordssz(i))/2.d0
-       erf2finaldssz(i)=erfactordssz(i)*f2finaldssz(1,i)
+       erf2finaldssz(i)=erfactordssz(i)*Au_139(i)
        statdssz(i)=factordssz(1,i)*EE_Au_139(i)
        systdssz(i)=factordssz(1,i)*ES_Au_139(i)
       enddo
+
+ 
 
 ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 c     Output
@@ -308,6 +319,7 @@ c     Output
      1    f2finaleps09(1,i),
      1    erf2finaleps09(i),stateps09(i),systeps09(i),f2finaldssz(1,i),
      1    erf2finaldssz(i),statdssz(i),systdssz(i)
+c,ES_Au_139(1)
 
          else
           write (21,1001) X_au_139(i),Q2_au_139(i),y(i),
@@ -318,6 +330,7 @@ c     Output
       end if
       enddo
 1002  format(f6.4,f6.1,f6.2,8e13.6)
+c1002  format(f6.2,f6.1,6e13.6,a) !when we have a % (E139)
 1001  format(f6.4,f6.1,f6.2,8e13.6)
       close(21)
 
