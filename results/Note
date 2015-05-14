@@ -1,0 +1,30 @@
+Experiment  Number initial data     Data after Q^2 EPS09 cut     Data after r=1.5 cut
+--------------------------------------------------------------------------------------------
+E139AGD            7                          7                           7
+E139ALD           17                         17                          13
+E139AUD           17                         17                          17
+E139BED           17                         17                           9
+E139CAD            7                          7                           5
+E139CD             7                          7                           3  
+E139FED           23                         23                          23
+E139HED           18                         18                           9
+EMCCD              9                          9                           9
+EMCCUD            19                         19                          19
+EMCSNC             8                          8                           8
+NMCALC            15                         15                          15
+NMCBEC            15                         15                          12
+NMCCAC            15                         15                          15
+NMCCAD            18                         15                          15
+NMCCALI           25                         20                           7
+NMCCD             24                         15                          10
+NMCCDQ2          191                        164                         159
+NMCCLI            25                         20                           6
+NMCFEC            15                         15                          15
+NMCHED            18                         16                           8
+NMCLID            24                         15                          10
+NMCLIDQ2         179                        153                         144
+NMCPBC            15                         15                          15
+NMCSNC            15                         15                          10
+NMCSNCQ2         146                        144                         139
+
+Total                                                                   702
