@@ -1,0 +1,184 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Parton distribution functions (PDFs) are currently one of the major
+sources of uncertainty in processes at hadron colliders, specifically at
+the LHC. Ever since they have been quantified for the first time~\cite{dflm},
+it has been recognized that PDF uncertainties stem from three
+sources: the underlying data (which are affected by statistical and
+systematic errors), the theory which is used to describe them
+(which is typically based on the truncation of a perturbative
+expansion) and the procedure which is used to extract the PDFs from
+the data. This last source of uncertainty is the most elusive, and because
+of it, it was thought until very recently~\cite{demortier} that PDF
+uncertainties are not yet understood from a statistical point of view.
+
+In a series of
+papers~\cite{Forte:2002fg,DelDebbio:2004qj,DelDebbio:2007ee,Ball:2008by,Rojo:2008ke,Ball:2009mk,Ball:2009qv,Ball:2010de,Ball:2011mu,Ball:2011uy,Ball:2012cx}
+we have introduced a methodology aimed at reducing as much as possible
+this procedural uncertainty, up to the point that
+it can be neglected in comparison to the remaining data and theory
+uncertainty. However, as data become more abundant and precise, and
+theoretical calculations more accurate, a full characterization of the
+procedural uncertainties becomes necessary.
+
+In the present paper we construct for the first time a set of PDFs
+with 
+an explicit characterization of procedural uncertainties. We do
+so by using a methodology which has been repeatedly
+suggested~\cite{demortier}, and recently used to study specific
+sources of PDF uncertainty~\cite{Watt:2012tq} though never (to the best
+of our knowledge) for full characterization: the so called ``closure
+test''. The idea is to assume that the underlying PDFs are known, and use
+this assumed set of PDFs to generate artificial data. One may then set
+theoretical uncertainties to zero (by using the same theory to
+generate data and to analyze them), and  fix the data
+uncertainty to any desired value. By determining
+PDFs from these artificial data, one can then tune the methodology
+until procedural uncertainties have been removed (or at least made
+small enough to be undetectable), and the ensuing PDFs faithfully
+reproduce the data uncertainty. Thus
+one may explicitly check that the output PDFs provide consistent and
+unbiased ~\cite{cowan} estimators of the underlying truth, that
+confidence levels reproduce the correct coverage (e.g., that the true
+value is indeed within the 68\% interval in 68\% of cases), and so
+on. Of course, a full closure test requires verifying that the
+procedure is robust: so, for example, that the conclusion that there
+are no procedural uncertainties is independent of the assumed
+underlying set of PDFs.
+
+This program will be fully realized in this paper, whose core is a
+discussion of the closure test itself. The main motivation for doing
+so at this time is, as mentioned, that data are more and more abundant
+and accurate and that more and more higher-order calculations have
+become available. 
+%
+In this work
+ we will use a very wide dataset, which in
+particular includes, besides the data used in previous global PDF fits, 
+all the most recent HERA deep-inelastic scattering
+data for inclusive and charm production
+cross-sections, 
+essentially all the most recent single-inclusive jet data and $W$
+and $Z$ rapidity distributions from
+the LHC, and also, for the first time in a
+global fit, $W$+$c$ production data, double-differential and high-mass Drell-Yan
+distributions, $W$ transverse momentum distributions, and top total
+cross section data from ATLAS and CMS. 
+%
+For many of these data, higher-order calculations
+and/or fast computational interfaces
+have become available only recently.  The dataset on which
+our PDF determination is based is summarized in Sect.~\ref{sec:expdata}, where
+in particular all new data included on top
+of those used for the previous NNPDF2.3 set~\cite{Ball:2012cx} are
+discussed. The theoretical calculations and tools used for their
+description and inclusion  in the PDF fit are summarized in
+Sect.~\ref{sec:theorytools}.
+
+The  inclusion of these new data and processes in our
+PDF fitting code has required very substantial computational upgrades,
+including a migration of the code to C{}\verb!++!.
+%
+Also, whereas the basic principles of our methodology are the same as in our
+previous PDF determinations, namely, a Monte Carlo approach based on
+using neural networks as underlying interpolating functions, several
+improvements have become necessary in order to ensure the full
+independence of procedural uncertainties which is required to pass the
+closure test. This includes a more general way to define the basis
+PDFs (needed in order to test basis-independence in the
+closure test); an improved way of making sure that the
+so-called preprocessing exponents which are introduced as part of the
+PDF parametrization do not bias the results of the fit; an improved
+version of the genetic algorithm used for PDF minimization; and an
+improved form of the cross-validation procedure which is used in order
+to determine the optimal fit (which in the presence of a redundant
+parametrization is not the absolute minimum of the figure of merit,
+since this would require fitting noise). All these methodological
+aspects are summarized in Sect.~\ref{sec:methodology}, where we also summarize
+the general structure and features of the new NNPDF 
+ C{}\verb!++! code.
+
+The closure test procedure is presented in
+Sect.~\ref{sec:closure}. We actually perform three different kinds of
+closure test, which we call respectively Level-0, Level-1 and
+Level-2. In the Level-0 closure test, perfect data are generated from
+the assumed underlying law, with  no uncertainty. The test is
+successful if a perfect fit to the data can be produced, i.e., a fit
+with vanishing $\chi^2$. By showing that our PDFs pass this test we
+prove that our methodology is not limited by choice of basis
+functions, functional
+form, number of parameter, or minimization algorithm. Also, by looking
+at the remaining uncertainty on the final PDF we can determine what we
+call the ``extrapolation uncertainty'', i.e., the uncertainty due to
+the fact that data points, even when infinitely precise, are not
+covering the whole of phase space. In a Level-1 closure test, data
+are generated with an uncertainty: this gives a full pseudodata set,
+which  thus simulates a realistic
+situation (but with knowledge of the underlying physical law). 
+However, instead of using the NNPDF Monte Carlo methodology, whereby
+pseudodata replicas are generated about the experimental data, we
+simply fit PDF replicas all to the same pseudodata. Despite the fact
+that the data are not fluctuating (i.e. the replicas are all fitted to
+the same pseudodata set), we find that results are affected by an
+uncertainty which we call  ``functional uncertainty'', and which is
+due to the fact that we are reconstructing a set of functions from a
+finite amount of discrete information. In a Level-2 closure test, once
+pseudodata are constructed, they are treated as real data according to
+the NNPDF methodology. We can then check that the closure test is
+successful with a wide variety of indicators, which include
+testing that the PDF replicas behave according to Bayes'
+theorem upon the inclusion of new (pseudo)data. We finally check that
+our results are stable upon a wide variety of changes, such as different
+assumed underlying PDFs, different choices of basis, different size of
+the neural network used for parametrization, and so on. 
+%
+We also show how ``self-closure'' of the NNPDF3.0 set is succesful,
+by using it as the input of a Level-2 closure test.
+
+Finally, we present the NNPDF3.0 set, which, as usual, we deliver
+at LO, NLO and NNLO in QCD theory, for a variety of values of
+$\alpha_s$, and  for a variety of values of the maximum value of
+active flavor numbers. Also, we provide PDFs determined using   various subsets
+of our full dataset. This includes sets based on HERA data only (which
+may thus be compared to HERAPDF PDFs~\cite{Radescu:2010zz,CooperSarkar:2011aa},
+ and may be used
+for applications where one wishes to use a PDF set based on a
+restrictive but consistent dataset); sets based on a ``conservative''
+data subset, which is found by studying a specific statistical
+indicator introduced previously by us~\cite{Ball:2010gb} which
+measures the consistency of each dataset with the remaining data,
+thereby allowing the removal data which are less compatible with the
+bulk of the dataset; sets based on the same data as our previous
+NNPDF2.3 dataset, thereby enabling us to separate the impact of new
+data from that of improved methodology when comparing NNPDF2.3 to
+NNPDF3.0; a set without LHC data, which is useful in order to
+gauge the impact of the latter; and sets
+where the HERA data are supplemented by
+all available data from either ATLAS or CMS,
+useful to compare with related studies presented by the LHC
+collaborations.
+%
+ All these datasets and their features
+are presented and compared in
+Sect.~\ref{sec:results}, where we also discuss in light of our
+results  specific issues of particular recent relevance in PDF
+determination: jet data and their impact on the gluon distribution,
+and the strange PDF which follows from both deep-inelastic and hadronic
+scattering data.
+
+Finally, in  Sect.~\ref{sec:phenomenology} we briefly discuss the 
+implications of the NNPDF3.0 set for LHC
+phenomenology, with special regard to Higgs production in gluon fusion, and 
+a number of other representative processes, for
+a center-of-mass energy of  13 TeV. 
+%
+Information 
+on delivery, usage, and future developments is collected in
+Sect.~\ref{sec:delivery}, while some technical results are relegated to 
+appendices: in Appendix~\ref{app-ew}
+we provide more details for the computation of QCD and electroweak corrections
+to LHC Drell-Yan data and in Appendix~\ref{app:distances} we present
+the definitions of the distance estimators we use 
+to compare between different sets
+of PDFs.
