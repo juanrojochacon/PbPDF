@@ -1,0 +1,68 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{Forte:2002fg}
+S.~Forte, L.~Garrido, J.~I. Latorre, and A.~Piccione, {\it Neural network
+  parametrization of deep-inelastic structure functions},  {\em JHEP} {\bf 05}
+  (2002) 062, [\href{http://arxiv.org/abs/hep-ph/0204232}{{\tt
+  hep-ph/0204232}}].
+
+\bibitem{DelDebbio:2004qj}
+{\bf The NNPDF} Collaboration, L.~Del~Debbio, S.~Forte, J.~I. Latorre,
+  A.~Piccione, and J.~Rojo, {\it Unbiased determination of the proton structure
+  function f2(p) with estimation},  {\em JHEP} {\bf 03} (2005) 080,
+  [\href{http://arxiv.org/abs/hep-ph/0501067}{{\tt hep-ph/0501067}}].
+
+\bibitem{DelDebbio:2007ee}
+{\bf The NNPDF} Collaboration, L.~Del~Debbio, S.~Forte, J.~I. Latorre,
+  A.~Piccione, and J.~Rojo, {\it {Neural network determination of parton
+  distributions: The nonsinglet case}},  {\em JHEP} {\bf 03} (2007) 039,
+  [\href{http://arxiv.org/abs/hep-ph/0701127}{{\tt hep-ph/0701127}}].
+
+\bibitem{Ball:2008by}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {A determination of
+  parton distributions with faithful uncertainty estimation}},  {\em Nucl.
+  Phys.} {\bf B809} (2009) 1--63, [\href{http://arxiv.org/abs/0808.1231}{{\tt
+  arXiv:0808.1231}}].
+
+\bibitem{Rojo:2008ke}
+{\bf The NNPDF} Collaboration, J.~Rojo et~al., {\it {Update on Neural Network
+  Parton Distributions: NNPDF1.1}},  \href{http://arxiv.org/abs/0811.2288}{{\tt
+  arXiv:0811.2288}}.
+
+\bibitem{Ball:2009mk}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {Precision determination
+  of electroweak parameters and the strange content of the proton from neutrino
+  deep-inelastic scattering}},  {\em Nucl. Phys.} {\bf B823} (2009) 195--233,
+  [\href{http://arxiv.org/abs/0906.1958}{{\tt arXiv:0906.1958}}].
+
+\bibitem{Ball:2009qv}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {Fitting Parton
+  Distribution Data with Multiplicative Normalization Uncertainties}},  {\em
+  JHEP} {\bf 05} (2010) 075, [\href{http://arxiv.org/abs/0912.2276}{{\tt
+  arXiv:0912.2276}}].
+
+\bibitem{Ball:2010de}
+{\bf {The NNPDF }} Collaboration, R.~D. Ball et~al., {\it {A first unbiased
+  global NLO determination of parton distributions and their uncertainties}},
+  {\em Nucl. Phys.} {\bf B838} (2010) 136--206,
+  [\href{http://arxiv.org/abs/1002.4407}{{\tt arXiv:1002.4407}}].
+
+\bibitem{Ball:2011mu}
+{\bf {The NNPDF }} Collaboration, R.~D. Ball et~al., {\it {Impact of Heavy
+  Quark Masses on Parton Distributions and LHC Phenomenology}},  {\em Nucl.
+  Phys.} {\bf B849} (2011) 296--363,
+  [\href{http://arxiv.org/abs/1101.1300}{{\tt arXiv:1101.1300}}].
+
+\bibitem{Ball:2011uy}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {Unbiased global
+  determination of parton distributions and their uncertainties at NNLO and at
+  LO}},  {\em Nucl.Phys.} {\bf B855} (2012) 153--221,
+  [\href{http://arxiv.org/abs/1107.2652}{{\tt arXiv:1107.2652}}].
+
+\bibitem{Ball:2012cx}
+{\bf NNPDF} Collaboration, R.~D. Ball, V.~Bertone, S.~Carrazza, C.~S. Deans,
+  L.~Del~Debbio, et~al., {\it {Parton distributions with LHC data}},  {\em
+  Nucl.Phys.} {\bf B867} (2013) 244--289,
+  [\href{http://arxiv.org/abs/1207.1303}{{\tt arXiv:1207.1303}}].
+
+\end{thebibliography}\endgroup
