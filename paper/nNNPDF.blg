@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: nNNPDF.aux
+The style file: JHEP.bst
+A level-1 auxiliary file: sec-introduction.aux
+Database file #1: nNNPDF.bib
+You've used 19 entries,
+            2195 wiz_defined-function locations,
+            644 strings with 6360 characters,
+and the built_in function-call counts, 6192 in all, are:
+= -- 630
+> -- 197
+< -- 0
++ -- 72
+- -- 53
+* -- 537
+:= -- 864
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 309
+empty$ -- 582
+format.name$ -- 53
+if$ -- 1586
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 74
+newline$ -- 60
+num.names$ -- 19
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 216
+stack$ -- 0
+substring$ -- 373
+swap$ -- 129
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 48
+width$ -- 21
+write$ -- 214
