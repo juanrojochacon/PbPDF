@@ -8,12 +8,48 @@ We write the relevant conversion formula, discuss error propagation,
 and show representative results for the various experiments.
 
 \be
-F_2^{Pb}(x,Q^2)= \frac{F_2^{Pb}(x,Q^2)}{F_2^{A}(x, Q^2)}R^A_{F_2^{D,C,Li}}F_2^{D,C,Li}(x,Q^2),
+F_2^{Pb}(x,Q^2)= \frac{F_2^{Pb}(x,Q^2)}{F_2^{A}(x, Q^2)}R^A_{F_2^{D,C,Li}}(x, Q^2)F_2^{D,C,Li}(x,Q^2),
+\label{compression1}
 \ee
-where $R^A_{F_2}$ are the experimental data for ratios of the DIS structure function $F_2^{A}(x, Q^2)$ for various heavy nuclei to those for deutherium, lithium or carbon,
+where $R^A_{F_2^{D,C,Li}}(x, Q^2)$ are the experimental data for ratios of the DIS structure function $F_2^{A}(x, Q^2)$ for various heavy nuclei to those for deutherium, lithium or carbon,
 \be
-R^A_{F_2^{D,C,Li}}= \frac{F_2^{A}(x, Q^2)}{F_2^{D,C,Li}(x,Q^2)},
+R^A_{F_2^{D,C,Li}}(x, Q^2)= \frac{F_2^{A}(x, Q^2)}{F_2^{D,C,Li}(x,Q^2)},
+\label{compression2}
 \ee
 see Tab. \ref{dataset}.
 
-For $F_2^{Pb}(x,Q^2)$, $F_2^{A}(x,Q^2)$, $F_2^{C}(x,Q^2)$ and $F_2^{C}(x,Q^2)$ we use EPS09 NLO nPDFs \cite{Eskola:2009uj} and, in order to obtain the DIS structure functions for deuterium, $F_2^D(x,Q^2)$, we neglect any nuclear effect, assume isospin symmetry ($u^p = d^n$ and $d^p = u^n$) and use the free proton NLO PDFs of MSTW \cite{Martin:2009iq}.
+For $F_2^{Pb}(x,Q^2)$, $F_2^{A}(x,Q^2)$, $F_2^{Li}(x,Q^2)$ and $F_2^{C}(x,Q^2)$ we use EPS09 NLO nPDFs \cite{Eskola:2009uj} and, in order to obtain the DIS structure functions for deuterium, $F_2^D(x,Q^2)$, we neglect any nuclear effect, assume isospin symmetry ($u^p = d^n$ and $d^p = u^n$) and use the free proton NLO PDFs of MSTW \cite{Martin:2009iq}.
+
+Therefore, the idea is to transform the DIS nuclear data, $R^A_{F_2^{D,C,Li}}(x, Q^2)$, into lead structure functions $F_2^{Pb}(x,Q^2)$ using equation (\ref{compression1}). We define, the conversion factor of this transformation as,
+
+\be
+\mathcal{C}(x,Q^2)= \frac{F_2^{Pb}(x,Q^2)}{F_2^{A}(x, Q^2)}F_2^{D,C,Li}(x,Q^2)
+\label{compression3}
+\ee
+and, consequently, $F_2^{Pb}(x,Q^2)=\mathcal{C}(x,Q^2)R^A_{F_2^{D,C,Li}}(x, Q^2)$.
+
+We use the Hessian method \cite{Pumplin:2001ct} to calculate the uncertainty of the conversion factor. In the Hessian approach, the corresponding uncertainty for a PDF-dependent quantity $\mathcal{O}=\mathcal{O}[f]$ can be computed as,
+\be
+\left(\Delta \mathcal{O}\right)^2 = \frac{1}{4}\sum_k\left(\mathcal{O}[S_k^+]-\mathcal{O}[S_k^-]\right)^2,
+\label{compression4}
+\ee
+where $\mathcal{O}[S_k^+]$ and $\mathcal{O}[S_k^-]$ denote the values of the quantity $\mathcal{O}$, computed by the nPDF error sets $S_k^+$ and $S_k^-$ and $S_0$ is the central PDF set.
+
+For the lithium and carbon cases, the uncertainty of the conversion factor is given by
+\be
+\left(\Delta \mathcal{C}\right)^2=\frac{1}{4}\sum_k\left(\frac{F_2^{Pb}[S_k^+]}{F_2^{A}[S_k^+]}F_2^{C,Li}[S_k^+]-\frac{F_2^{Pb}[S_k^-]}{F_2^{A}[S_k^-]}F_2^{C,Li}[S_k^-]\right)^2.
+\label{compression5}
+\ee
+Neglecting the uncertainty due to the deuterium PDF, the uncertainty of the conversion factor is in this case,
+\be
+\left(\Delta \mathcal{C}\right)^2=\frac{1}{4}\sum_k\left(\frac{F_2^{Pb}[S_k^+]}{F_2^{A}[S_k^+]}F_2^{D}[S_0]-\frac{F_2^{Pb}[S_k^-]}{F_2^{A}[S_k^-]}F_2^{D}[S_0]\right)^2,
+\label{compression6}
+\ee
+where $F_2^{D}[S_0]$ in the value of $F_2$ computed by the central NLO MSTW PDF set \cite{Martin:2009iq} and $F_2^{Pb,C,Li,A}[S_k^{-,+}]$ are computed by the NLO EPS09 sets \cite{Eskola:2009uj}.
+
+Therefore, the theoretical uncertainty of the lead structure functions is
+\be
+d\sigma^{th}= \Delta \mathcal{C}R^A_{F_2^{D,C,Li}}.
+\label{compression7}
+\ee
+
