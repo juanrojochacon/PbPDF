@@ -1,66 +1,133 @@
 
-\section{Dataset}
+\section{Experimental data}
 
-In this section we summarize the data that has been used, the
-kinematic cuts, and the treatment of experimental
+In this section we summarize the data sets that have been used
+in the present determination of the parton distribution of lead nuclei.
+%
+We also discuss the kinematical cuts and the  treatment of experimental
 uncertainties
+%
+In this first study of nuclear PDFs with the NNPDF methodology
+we restrict ourselves to fixed-target neutral current lepton-nuclei
+deep-inelastic scattering structure functions.
+%
+In particular, we include the the
+NMC~\cite{Amaudruz:1995tq,Arneodo:1995cs,Arneodo:1996rv,Arneodo:1996ru}, SLAC139~\cite{PhysRevD.49.4348} and EMC~\cite{Ashman:1992kv}
+measurements of ratios of nuclear structure functions, defined
+as
+\be
+\label{eqratio}
+\frac{F_2^{A_1}(x,Q^2)}{F_2^{A_2}(x,Q^2)} \, .
+\ee
+The different types of nuclei $A_1$ and $A_2$ that are used in each
+of these experiments is summarized in  Table~\ref{dataset}, as well
+as the number of data points that survive our baseline kinematical
+cuts and the corresponding publication reference.
+%
+In terms of neutral current DIS nuclear data, the experiments included
+in Table~\ref{dataset} are the same of the EPS09 analysis.
 
-The data in our analysis consist of $\mathit{l} + \mathit{A}$ DIS measurements. These nuclear data comprise the NMC \cite{Amaudruz:1995tq,Arneodo:1995cs,Arneodo:1996rv,Arneodo:1996ru}, SLAC 139 \cite{PhysRevD.49.4348} and EMC \cite{Ashman:1992kv} results for ratios of the DIS structure function $F_2^{A}(x,Q^2)$ for several heavy nuclei to those of deuterium, lithium or carbon, see  Tab. \ref{dataset}.
 
-The kinematical variables in DIS are the Bjorken-x and the virtuality of the photon $Q^2$. As the compression of the nuclear data to lead structure function is done using EPS09 NLO nPDFs, the kinematical cut $Q^2 \ge 1.69$  is imposed \cite{Eskola:2009uj}.
-
-The experimental uncertainty, $d\sigma_i^{exp}$, is obtained adding in quadrature the systematic and statistical errors dor each point. The theoretical uncertainty, $d\sigma_i^{th}$, is the one due to the conversion factor. We require that only points where $d\sigma^{th}_i \le$ 1.5 $d\sigma^{exp}_i$ are included in the fit.
-
-\begin{table}
-\centering
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[t]
+  \centering
+  \small
 \begin{tabular}{c c c c}
 \hline
+Experiment & $A_1/A_2$ & $N_{\rm dat}$ & Reference\\
 \hline
-Experiment & Nuclei & Data points & ref.\\
 \hline
   SLAC E-139 & He(4)/D & 9 & \cite{PhysRevD.49.4348} \\
   NMC 95, re. & He/D & 8 & \cite{Amaudruz:1995tq}\\
-\\
+\hline
   NMC 95 & Li(6)/D & 10 & \cite{Arneodo:1995cs}\\
   NMC 95, $Q^2$ dependence & Li/D & 144 &\cite{Arneodo:1995cs}\\
-\\
+\hline
   SLAC E-139 & Be(9)/D & 9 & \cite{PhysRevD.49.4348}\\
   NMC 96 & Be/C & 12 & \cite{Arneodo:1996rv}\\
-\\
+\hline
   CERN EMC & C(12)/D & 9 & \cite{Ashman:1992kv}\\
   SLAC E-139 & C/D & 3 & \cite{PhysRevD.49.4348}\\
   NMC 95, NMC 95, re.  & C/D & 10 & \cite{Arneodo:1995cs,Amaudruz:1995tq}\\
   NMC 95, $Q^2$ dependence & C/D & 159 & \cite{Arneodo:1995cs}\\
   NMC 95, re. & C/Li & 6 & \cite{Amaudruz:1995tq}\\
-\\
+\hline
   SLAC E-139 & Al(27)/D & 13 & \cite{PhysRevD.49.4348}\\
   NMC 96 & Al/C & 15 & \cite{Arneodo:1996rv}\\
-\\
+\hline
   SLAC E-139 & Ca(40)/D & 5 & \cite{PhysRevD.49.4348}\\
   NMC 95, re. & Ca/D & 15 & \cite{Amaudruz:1995tq}\\
   NMC 95, re. & Ca/Li & 7 & \cite{Amaudruz:1995tq}\\
   NMC 96 & Ca/C & 15 & \cite{Arneodo:1996rv}\\
-\\
+\hline
   SLAC E-139 & Fe(56)/D & 23 & \cite{PhysRevD.49.4348}\\
   NMC 96 & Fe/C & 15 & \cite{Arneodo:1996rv}\\
-\\
+\hline
   CERN EMC & Cu(64)/D & 19 & \cite{Ashman:1992kv}\\
-\\
+\hline
   SLAC E-139 & Ag(108)/D & 7 & \cite{PhysRevD.49.4348}\\
-\\
+\hline
  CERN EMC & Sn(117)/C & 8 & \cite{Ashman:1992kv}\\
  NMC 96 & Sn/C & 10 & \cite{Arneodo:1996rv}\\
  NMC 96, $Q^2$ dependence  & Sn/C & 139 & \cite{Arneodo:1996ru}\\
-\\
-  SLAC E-139 & Au(197)/D & 17 & \cite{PhysRevD.49.4348}\\
-\\
- NMC 96 & Pb/C & 15 & \cite{Arneodo:1996rv}\\
 \hline
+  SLAC E-139 & Au(197)/D & 17 & \cite{PhysRevD.49.4348}\\
+\hline
+ NMC 96 & Pb/C & 15 & \cite{Arneodo:1996rv}\\
+ \hline
+ \hline
  Total & & 702 & \\
 \hline
-\hline
 \end{tabular}
-\caption{Data sets included in the analysis. The mass numbers are indicated in parentheses. The number of data points refers to those falling within our cuts: $Q^2 \ge 1.69$ and $d\sigma^{th}_i \le$ 1.5 $d\sigma^{exp}_i$.}
+\caption{\small Data sets included in the present analysis.
+  %
+  In the second column we indicate the nuclei $A_1$ and $A_2$ which
+  have been used in the measurement, see Eq.~(\ref{eqratio}),
+  where when needed we indicate the atomic mass
+  number in  parentheses.
+  %
+  In the third column the indicate the number of data points that
+  survive the baseline kinematical cuts.
+  %
+  In the last column we indicate the corresponding publication reference.
+}
 \label{dataset}
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In this fit we use the standard kinematical cuts of the NNPDF unpolarized
+fits, namely $Q^2 \ge Q^2_{\rm min}=3.5$ GeV$^2$ and $W^2 \ge W^2_{\rm min}=12.5$
+GeV$^2$, which are chosen to minimize the impact of low scale non-perturbative
+corrections and of higher twists.
+%
+Note that this cut is slightly more stringent that the
+corresponding kinematical cut $Q^2 \ge 1.69$  used in
+EPS09~\cite{Eskola:2009uj}.
+
+
+
+Since the experimental covariance matrix is not available for any of
+the nuclear DIS experiments summarized in Table~\ref{dataset},
+we add in quadrature the statistical and systematic errors for each
+data point, assuming that the systematic errors are fully uncorrelated
+\be
+\label{experr}
+\sigma_i^{\rm exp,tot} = \lp \sigma_i^{\rm exp,stat}+\sigma_i^{\rm exp,sys}\rp^2 \, .
+\ee
+Note that since measurements are performed in terms of ratios of
+structure functions between different nuclei, Eq.~(\ref{eqratio}),
+common multiplicative systematic uncertainties such as luminosity will
+cancel in the ratio.
+%
+As we discuss in the next section, we will add to
+Eq.~(\ref{experr}) another contribution due to the theoretical
+uncertainty in the conversion from Eq.~(\ref{eqratio}) to the ratio
+of lead over deuteron structure functions
+\be
+\label{eqratio2}
+\frac{F_2^{Pb}(x,Q^2)}{F_2^{d}(x,Q^2)} \, ,
+\ee
+which is the quantity which will be used for the nuclear
+PDF fits presented in this work.
 
