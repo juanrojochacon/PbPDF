@@ -5,7 +5,18 @@ In this section we summarize the data sets that have been used
 in the present determination of the parton distribution of lead nuclei.
 %
 We also discuss the kinematical cuts and the  treatment of experimental
-uncertainties
+uncertainties.
+%
+Then we present the basic strategy that we adopt in this work
+for the conversion of the
+experimental data for the ratio of structure functions of different nuclei, $F_2^{A_1}$ and $F_2^{A_2}$, into
+a common observable which is chosen to be the ratio of lead $F_2^{Pb}$ and deuteron $F_2^d$ structure
+functions.
+
+
+\subsection{Nuclear DIS structure functions data}
+
+
 %
 In this first study of nuclear PDFs with the NNPDF methodology
 we restrict ourselves to fixed-target neutral current lepton-nuclei
@@ -131,3 +142,241 @@ of lead over deuteron structure functions
 which is the quantity which will be used for the nuclear
 PDF fits presented in this work.
 
+
+\subsection{Conversion of nuclear data to lead structure functions}
+
+In this section we explain the strategy that we use in this work based on the conversion of
+experimental data for the ratio of structure functions of different nuclei, $F_2^{A_1}$ and $F_2^{A_2}$, into
+a common observable which is chosen to be the ratio of lead $F_2^{Pb}$ and deuteron $F_2^d$ structure
+functions.
+%
+The main advantage of this method is that it is not necessary anymore to determine from the data the
+dependence of the nuclear modification ratios $R_{i}(x,Q^2,A)$ on the atomic mass number $A$.
+%
+Therefore, we can simply fit the parton distributions of nucleons in lead nuclei using exactly
+the same technology as in the case of the unpolarized global NNPDF fits.
+%
+After presenting the  relevant conversion formulae,
+we discuss how theoretical uncertainties are propagated from
+the input nuclear PDFs used to the experimental data,
+and show representative results for a variety of experiments.
+
+The basic idea is the following.
+%
+Available nuclear DIS structure function data is presented as ratios
+of structure functions measured on different nuclear targets
+\be
+\frac{F_2^{A_1}(x,Q^2)}{F_2^{A_2}(x,Q^2)} \, ,
+\ee
+and we would like to express these measurements in terms
+of a common ratio of the lead structure functions over
+the deuteron structure functions,
+\be
+\frac{F_2^{\rm Pb}(x,Q^2)}{F_2^{\rm d}(x,Q^2)} \, .
+\ee
+To achieve this, we use the results of a previous nuclear fit
+to write this conversion as follows
+\be
+\label{eq:conversion2}
+\lp  \frac{F_2^{\rm Pb}(x,Q^2)}{F_2^{\rm d}(x,Q^2)} \rp_{\rm exp+th}
+= \lp \frac{F_2^{A_1}(x,Q^2)}{F_2^{A_2}(x,Q^2)} \rp_{\rm th}\cdot
+\mathcal{C}_{\rm th}(x,Q^2, A_1,A_2) \ ,
+\ee
+where the theoretical conversion factor $\mathcal{C}_{\rm th}(x,Q^2, A_1,A_2)$
+is evaluated using an existing nuclear PDF analysis as follows
+\be
+\label{eq:conversionfactor}
+\mathcal{C}_{\rm th}(x,Q^2, A_1,A_2) \equiv
+\lp \frac{F_2^{A_2}(x,Q^2)}{F_2^{A_1}(x,Q^2)} \rp_{\rm th} \cdot
+\lp  \frac{F_2^{\rm Pb}(x,Q^2)}{F_2^{\rm d}(x,Q^2)} \rp_{\rm th} \ .
+\ee
+
+The  advantage of using the conversion factor
+Eq.~(\ref{eq:conversionfactor}) is that a substantial fraction
+of the nuclear PDF uncertainties (as well as many other theory
+uncertainties such as higher perturbative orders) cancel
+in the ratio of nuclear structure functions, specially
+if $A_1$ is not to different to $A_2$.
+%
+Therefore, by ensuring that the theory uncertainty associated
+to the conversion factor is not much larger than the experimental
+uncertainty, we can reliably use the ratio
+of lead to deuteron structure functions
+Eq.~(\ref{eq:conversion2}) as a good proxy of the original
+experimental measurements.
+%
+In addition, since the conversion factor is expressed
+in terms of nuclear structure functions (which are fitted)
+rather than in individual nuclear PDFs, we expect them
+to be reasonably independent of the specific choice of
+input nuclear PDF fit.
+
+
+
+In the calculation of the conversion factor
+Eq.~(\ref{eq:conversionfactor}) we use either the EPS09 or the
+DSSZ NLO nuclear PDF fits.
+%
+For the free nucleon PDF we use the MSTW08 NLO set, consistently
+with the original nuclear PDF fits, though we have checked
+that the dependence on this choice is really mild due to
+the cancellations in the ratios.
+%
+In the calculation of the structure function of deuterium
+$F_2^{\rm d}$ we assume isospin symmetry and neglect
+any nuclear effect, which are known to be negligible
+as compared to the typical
+uncertainties in nuclear PDF fits.\footnote{The impact
+  of nuclear effects in unpolarized proton PDF analysis
+  as been discussed for example in
+  Refs.~\cite{Ball:2013gsa,Owens:2012bv,Harland-Lang:2014zoa}}.
+%
+The structure functions in Eq.~(\ref{eq:conversionfactor})
+are computed using the original EPS09 fitting code, in a zero-mass
+variable-flavor number scheme at NLO, and no target mass
+corrections are included.
+%
+Note that the actual fit settings used to extract the
+lead nuclear structure functions from Eq.~(\ref{eq:conversion2})
+will be different, but the approximations enumerate
+above are enough for the computation of the conversion factor.
+
+The conversion factor Eq.~(\ref{eq:conversionfactor}) is affected
+by the PDF uncertainties of the nuclear fit used in its computation.
+%
+In both EPS09 and DSSZ, PDF uncertainties are estimated with
+the Hessian method~\cite{Pumplin:2001ct}.
+%
+Therefore, we can use the usual expressions for linear
+error propagation in the Hessian approach to compute
+the nuclear PDF uncertainties associated to
+Eq.~(\ref{eq:conversionfactor}).
+%
+On the other hand, we neglect the free proton PDF uncertainties
+from the MSTW08 set, which cancel to a very good approximation
+in the ratios that define the conversion factor and that
+are much smaller than nuclear PDF uncertainties.
+
+In the Hessian approach, the PDF
+uncertainties in a given cross-section
+$\mathcal{O}=\mathcal{O}[f]$ can be computed as follows
+\be
+\left(\Delta \mathcal{O}\right)^2 = \frac{1}{4}\sum_{k=1}^{N_{\rm eig}}\left(\mathcal{O}[S_k^+]-\mathcal{O}[S_k^-]\right)^2,
+\label{compression4}
+\ee
+where $\mathcal{O}[S_k^+]$ and $\mathcal{O}[S_k^-]$ denote the values of the quantity $\mathcal{O}$, computed by the nPDF error sets $S_k^+$ and $S_k^-$ and $S_0$ is the central PDF set, and $N_{\rm eig}$ is the number
+of asymmetric eigenvectors of this Hessian PDF set.
+
+Using Eq.~(\ref{compression4}), we can compute the nuclear
+PDF uncertainty associated to the conversion factor as follows
+\be
+\left(\Delta \mathcal{C}\right)^2 = \frac{1}{4}\sum_{k=1}^{N_{\rm eig}}\left(\mathcal{C}[S_k^+]-\mathcal{C}[S_k^-]\right)^2 =
+\frac{1}{4}\sum_{k=1}^{N_{\rm eig}}\left(
+\frac{F_2^{A_2}(S_k^+)}{F_2^{A_1}(S_k^+)} 
+ \frac{F_2^{\rm Pb}(S_k^+)}{F_2^{\rm d}(S_0)}
+ -
+\frac{F_2^{A_2}(S_k^-)}{F_2^{A_1}(S_k^-)} 
+ \frac{F_2^{\rm Pb}(S_k^-)}{F_2^{\rm d}(S_0)}
+ \right)^2 \, ,
+\label{compression5}
+\ee
+where note that the deuteron structure functions are always
+calculated with the central set $S_0$, since nuclear
+PDF uncertainties are ignored in this case.
+%
+The correlation between the same eigenvector variations between
+different nuclei ensures that the total
+PDF uncertainty Eq.~(\ref{compression5}) associated to
+the conversion factor will be typically rather smaller
+than the corresponding experimental uncertainties, guaranteeing
+the robustness of our strategy.
+
+In Fig.~\ref{fig1aue139} we illustrate the typical size of
+the PDF uncertainties associated with the conversion factor,
+computed using Eq.~(\ref{compression5}), with the corresponding
+experimental uncertainties for a number of representative datasets.
+%
+We show the results when the conversion factor is computed with
+EPS09 and with DSSZ, as percentage compared to the central value
+of the conversion factor.
+%
+As can be seen, for most of the points in $x$ and $Q^2$ the
+PDFs uncertainties in the conversion factor are smaller than
+the total experimental uncertainty.
+%
+Therefore, by cutting those data points for which the theory
+error is too large, we can end up with a reduced nuclear
+data set expressed in terms of $F_2^{\rm Pb}/F_2^{\rm d}$.
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[width=0.49\textwidth]{plots/au_e139.pdf}
+  \includegraphics[width=0.49\textwidth]{plots/au_e139.pdf}
+\end{center}
+\vspace{-0.3cm}
+\caption{\small Left plot: comparison of the magnitude
+  of the total experimental uncertainty in
+  percentage (blue crosses)
+  with the size of the PDF uncertainty in the conversion
+  factor, in percent computed with respect to the
+  central value, using EPS09 as input PDF set, for
+  the E139 experiment.
+  %
+  Right plot: the same comparison now using DSSZ as input
+  in the calculation of the conversion factors.
+}
+\label{fig1aue139}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+Therefore, in this work we will keep only those data points
+for the experiments listed in Table~\ref{dataset} which satisfy the
+condition that
+\be
+\frac{\Delta \mathcal{C} }{\mathcal{C} } \le K_{\rm th} \cdot \frac{\sigma^{\rm exp,tot}}{
+  \lp F_2^{A_1}/F_2^{A_1}\rp_{\rm exp}} \,  ,
+\ee
+where $\sigma^{\rm exp,tot}$ is the total experimental uncertainty,
+Eq.~(\ref{experr}), and   $\lp F_2^{A_1}/F_2^{A_1}\rp_{\rm exp}$ is the
+corresponding central value of the original experimental measurement.
+%
+The value of $K_{\rm th}$ cannot be much larger than 1, else our
+nuclear PDF fit would be biased by the choice of input
+nuclear PDF set.
+%
+In this work we will explore different choices for
+$K_{\rm th}$ in the range $\lc 1.0,1.5\rc$, and study the stability
+if the fit results with respect to this choice.
+
+Therefore, the theoretical uncertainty of the lead structure functions is
+\be
+d\sigma^{th}= \Delta \mathcal{C}R^A_{F_2^{D,C,Li}}.
+\label{compression7}
+\ee
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=0.98\textwidth]{plots/fig1nmc.pdf}
+\end{center}
+\vspace{-0.3cm}
+\caption{\small A representative subset of the NMC data
+  on ratios of nuclear structure functions, after the conversion
+  to the common ratio $F_2^{\rm Pb}/F_2^{\rm d}$ using the strategy
+  discussed in the text.
+  %
+  In the upper plots the conversion has been performed using EPS09,
+  while in the lower plots it has been done using DSSZ.
+  %
+  In both cases, the corresponding theoretical uncertainty from
+  the conversion factor has been added in quadrature to
+  the total experimental uncertainty.
+}
+\label{fig1nmc}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
