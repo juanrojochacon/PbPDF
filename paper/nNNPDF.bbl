@@ -1,5 +1,15 @@
 \providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
+\bibitem{Eskola:2009uj}
+K.~J. Eskola, H.~Paukkunen, and C.~A. Salgado, {\it {EPS09 - a New Generation
+  of NLO and LO Nuclear Parton Distribution Functions}},
+  \href{http://arxiv.org/abs/0902.4154}{{\tt arXiv:0902.4154}}.
+
+\bibitem{deFlorian:2011fp}
+D.~de~Florian, R.~Sassot, P.~Zurita, and M.~Stratmann, {\it {Global Analysis of
+  Nuclear Parton Distributions}},  {\em Phys.Rev.} {\bf D85} (2012) 074028,
+  [\href{http://arxiv.org/abs/1112.6324}{{\tt arXiv:1112.6324}}].
+
 \bibitem{Forte:2002fg}
 S.~Forte, L.~Garrido, J.~I. Latorre, and A.~Piccione, {\it Neural network
   parametrization of deep-inelastic structure functions},  {\em JHEP} {\bf 05}
@@ -65,6 +75,46 @@ S.~Forte, L.~Garrido, J.~I. Latorre, and A.~Piccione, {\it Neural network
   Nucl.Phys.} {\bf B867} (2013) 244--289,
   [\href{http://arxiv.org/abs/1207.1303}{{\tt arXiv:1207.1303}}].
 
+\bibitem{Ball:2011gg}
+R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, et~al., {\it
+  {Reweighting and Unweighting of Parton Distributions and the LHC W lepton
+  asymmetry data}},  {\em Nucl.Phys.} {\bf B855} (2012) 608--638,
+  [\href{http://arxiv.org/abs/1108.1758}{{\tt arXiv:1108.1758}}].
+
+\bibitem{Ball:2010gb}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {Reweighting NNPDFs: the
+  W lepton asymmetry}},  {\em Nucl. Phys.} {\bf B849} (2011) 112--143,
+  [\href{http://arxiv.org/abs/1012.0836}{{\tt arXiv:1012.0836}}].
+
+\bibitem{Armesto:2013kqa}
+N.~Armesto, J.~Rojo, C.~A. Salgado, and P.~Zurita, {\it {Bayesian reweighting
+  of nuclear PDFs and constraints from proton-lead collisions at the LHC}},
+  {\em JHEP} {\bf 1311} (2013) 015, [\href{http://arxiv.org/abs/1309.5371}{{\tt
+  arXiv:1309.5371}}].
+
+\bibitem{Paukkunen:2014pha}
+H.~Paukkunen, K.~J. Eskola, and C.~Salgado, {\it {Dijets in p + Pb collisions
+  and their quantitative constraints for nuclear PDFs}},  {\em Nucl.Phys.} {\bf
+  A931} (2014) 331--336, [\href{http://arxiv.org/abs/1408.4563}{{\tt
+  arXiv:1408.4563}}].
+
+\bibitem{Eskola:2013aya}
+K.~J. Eskola, H.~Paukkunen, and C.~A. Salgado, {\it {A perturbative QCD study
+  of dijets in p+Pb collisions at the LHC}},  {\em JHEP} {\bf 1310} (2013) 213,
+  [\href{http://arxiv.org/abs/1308.6733}{{\tt arXiv:1308.6733}}].
+
+\bibitem{Helenius:2014qla}
+I.~Helenius, K.~J. Eskola, and H.~Paukkunen, {\it {Probing the small-$x$
+  nuclear gluon distributions with isolated photons at forward rapidities in
+  p+Pb collisions at the LHC}},  {\em JHEP} {\bf 1409} (2014) 138,
+  [\href{http://arxiv.org/abs/1406.1689}{{\tt arXiv:1406.1689}}].
+
+\bibitem{d'Enterria:2015jna}
+D.~d'Enterria, K.~Krajczár, and H.~Paukkunen, {\it {Top-quark production in
+  proton–nucleus and nucleus–nucleus collisions at LHC energies and
+  beyond}},  {\em Phys.Lett.} {\bf B746} (2015) 64--72,
+  [\href{http://arxiv.org/abs/1501.05879}{{\tt arXiv:1501.05879}}].
+
 \bibitem{Amaudruz:1995tq}
 {\bf New Muon} Collaboration, P.~Amaudruz et~al., {\it {A Reevaluation of the
   nuclear structure function ratios for D, He, Li-6, C and Ca}},  {\em
@@ -96,15 +146,21 @@ J.~Gomez et~al., {\it Measurement of the $a$ dependence of deep-inelastic
   ratio of the nucleon structure function in copper and deuterium}},  {\em
   Z.Phys.} {\bf C57} (1993) 211--218.
 
-\bibitem{Eskola:2009uj}
-K.~J. Eskola, H.~Paukkunen, and C.~A. Salgado, {\it {EPS09 - a New Generation
-  of NLO and LO Nuclear Parton Distribution Functions}},
-  \href{http://arxiv.org/abs/0902.4154}{{\tt arXiv:0902.4154}}.
+\bibitem{Ball:2013gsa}
+{\bf The NNPDF} Collaboration, R.~D. Ball et~al., {\it {Theoretical issues in
+  PDF determination and associated uncertainties}},  {\em Phys.Lett.} {\bf
+  B723} (2013) 330--339, [\href{http://arxiv.org/abs/1303.1189}{{\tt
+  arXiv:1303.1189}}].
 
-\bibitem{Martin:2009iq}
-A.~D. Martin, W.~J. Stirling, R.~S. Thorne, and G.~Watt, {\it {Parton
-  distributions for the LHC}},  {\em Eur. Phys. J.} {\bf C63} (2009) 189--285,
-  [\href{http://arxiv.org/abs/0901.0002}{{\tt arXiv:0901.0002}}].
+\bibitem{Owens:2012bv}
+J.~Owens, A.~Accardi, and W.~Melnitchouk, {\it {Global parton distributions
+  with nuclear and finite-$Q^2$ corrections}},
+  \href{http://arxiv.org/abs/1212.1702}{{\tt arXiv:1212.1702}}.
+
+\bibitem{Harland-Lang:2014zoa}
+L.~A. Harland-Lang, A.~D. Martin, P.~Motylinski, and R.~S. Thorne, {\it {Parton
+  distributions in the LHC era: MMHT 2014 PDFs}},
+  \href{http://arxiv.org/abs/1412.3989}{{\tt arXiv:1412.3989}}.
 
 \bibitem{Pumplin:2001ct}
 J.~Pumplin et~al., {\it {Uncertainties of predictions from parton distribution

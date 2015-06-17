@@ -142,6 +142,34 @@ of lead over deuteron structure functions
 which is the quantity which will be used for the nuclear
 PDF fits presented in this work.
 
+In Fig.~\ref{figkinplot} we show the
+kinematical coverage in the $(x,Q^2)$ plane
+  of the DIS nuclear data included in the present analysis,
+  and summarized in Table~\ref{dataset}.
+  %
+  Only those points that satisfy the baseline kinematical
+  cuts $Q^2 \ge Q^2_{\rm min}=3.5$ GeV$^2$ and $W^2 \ge W^2_{\rm min}=12.5$
+GeV$^2$ are shown in this figure.
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[width=0.70\textwidth]{plots/kinplot.pdf}
+ \end{center}
+\vspace{-0.3cm}
+\caption{\small Kinematical coverage in the $(x,Q^2)$ plane
+  of the DIS nuclear data included in the present analysis,
+  and summarized in Table~\ref{dataset}.
+  %
+  Only those points that satisfy the baseline kinematical
+  cuts $Q^2 \ge Q^2_{\rm min}=3.5$ GeV$^2$ and $W^2 \ge W^2_{\rm min}=12.5$
+GeV$^2$ are shown in this figure.
+}
+\label{figkinplot}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \subsection{Conversion of nuclear data to lead structure functions}
 
@@ -334,6 +362,7 @@ Therefore, in this work we will keep only those data points
 for the experiments listed in Table~\ref{dataset} which satisfy the
 condition that
 \be
+\label{eq:condition}
 \frac{\Delta \mathcal{C} }{\mathcal{C} } \le K_{\rm th} \cdot \frac{\sigma^{\rm exp,tot}}{
   \lp F_2^{A_1}/F_2^{A_1}\rp_{\rm exp}} \,  ,
 \ee
@@ -349,13 +378,45 @@ In this work we will explore different choices for
 $K_{\rm th}$ in the range $\lc 1.0,1.5\rc$, and study the stability
 if the fit results with respect to this choice.
 
-Therefore, the theoretical uncertainty of the lead structure functions is
+For the data points that satisfy the condition
+Eq.~(\ref{eq:condition}) we add the theoretical uncertainty in
+the conversion factor Eq.~(\ref{compression5})
+as an additional systematic uncertainty.
+%
+This time however this new theory systematic is treated to be as fully
+correlated among all the data bins of a given experiment,
+since it is obtained from the same underlying set of
+nuclear PDFs.
+%
+Therefore, the total experimental uncertainty taking into account the theoretical
+uncertainty in the conversion factor will be
 \be
-d\sigma^{th}= \Delta \mathcal{C}R^A_{F_2^{D,C,Li}}.
-\label{compression7}
+\label{eq:total}
+\sigma_i^{\rm exp,tot} = \lp \sigma_i^{\rm exp,stat,2}+\sigma_i^{\rm exp,sys,2}
++\sigma_i^{\rm th,2} \rp^{1/2} \, ,
 \ee
+where the theoretical error is defined as
+\be
+\sigma_i^{\rm th} \equiv  \frac{\Delta \mathcal{C} }{\mathcal{C} }
+\cdot \lp  \frac{F_2^{\rm Pb}(x,Q^2)}{F_2^{\rm d}(x,Q^2)} \rp_{\rm exp+th}
+\ee
+and where note that the statistical and systematic
+experimental uncertainties have also been corrected
+with the same conversion factor as the central
+experimental data.
 
-
+In Fig.~\ref{fig1nmc} we show representative subset of the NMC data
+  on ratios of nuclear structure functions, after the conversion
+  to the common ratio $F_2^{\rm Pb}/F_2^{\rm d}$ using the strategy
+  discussed in the text.
+  %
+  In the upper plots the conversion has been performed using EPS09,
+  while in the lower plots it has been done using DSSZ.
+  %
+  In both cases, the corresponding theoretical uncertainty from
+  the conversion factor has been added in quadrature to
+  the total experimental uncertainty, as
+  indicated in Eq.~(\ref{eq:total}).
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
