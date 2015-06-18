@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.22)  18 JUN 2015 16:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.22)  18 JUN 2015 17:33
 entering extended mode
  %&-line parsing enabled.
 **nNNPDF.tex
@@ -403,40 +403,29 @@ File: plots/au_e139.pdf Graphic file (type pdf)
 <plots/fig1nmc.pdf, id=237, 469.755pt x 237.88875pt>
 File: plots/fig1nmc.pdf Graphic file (type pdf)
  <use plots/fig1nmc.pdf>)
-(./sec-fitting.tex [8 <./plots/au_e139.pdf>] [9 <./plots/fig1nmc.pdf>]
-
-LaTeX Warning: Citation `Bertone:2013vaa' on page 10 undefined on input line 67
-.
-
-[10]
+(./sec-fitting.tex [8 <./plots/au_e139.pdf>] [9 <./plots/fig1nmc.pdf>] [10]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 141.
 
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
-
-
-LaTeX Warning: Citation `Ball:2014uwa' on page 11 undefined on input line 185.
-
-
-LaTeX Warning: Citation `Ball:2012wy' on page 11 undefined on input line 205.
-
-) (./sec-results.tex [11]
-<plots/pdfcompSinglet-final1.pdf, id=302, 867.24pt x 433.62pt>
+) (./sec-results.tex
+[11] <plots/pdfcompSinglet-final1.pdf, id=308, 867.24pt x 433.62pt>
 File: plots/pdfcompSinglet-final1.pdf Graphic file (type pdf)
 
 <use plots/pdfcompSinglet-final1.pdf>
-<plots/pdfcompGluon-final1.pdf, id=304, 867.24pt x 433.62pt>
+<plots/pdfcompGluon-final1.pdf, id=310, 867.24pt x 433.62pt>
 File: plots/pdfcompGluon-final1.pdf Graphic file (type pdf)
 
 <use plots/pdfcompGluon-final1.pdf>
-<plots/pdfcompSinglet-final2.pdf, id=307, 867.24pt x 433.62pt>
+<plots/pdfcompSinglet-final2.pdf, id=313, 867.24pt x 433.62pt>
 File: plots/pdfcompSinglet-final2.pdf Graphic file (type pdf)
 
 <use plots/pdfcompSinglet-final2.pdf>
-<plots/pdfcompGluon-final2.pdf, id=309, 867.24pt x 433.62pt>
+<plots/pdfcompGluon-final2.pdf, id=315, 867.24pt x 433.62pt>
 File: plots/pdfcompGluon-final2.pdf Graphic file (type pdf)
 
 <use plots/pdfcompGluon-final2.pdf>) (./sec-summary.tex [12 <./plots/pdfcompSin
@@ -451,38 +440,32 @@ Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no “ in font cmti10!
  [14]) [15]
-(./nNNPDF.aux (./sec-introduction.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(./nNNPDF.aux (./sec-introduction.aux)) ) 
 Here is how much of TeX's memory you used:
  5644 strings out of 493848
  78299 string characters out of 1152823
- 164826 words of memory out of 3000000
+ 164933 words of memory out of 3000000
  8701 multiletter control sequences out of 15000+50000
  13564 words of font info for 53 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  38i,9n,38p,1024b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on nNNPDF.pdf (15 pages, 1056187 bytes).
+</usr/share/texmf-texlive/fonts/type1/
+public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb>
+Output written on nNNPDF.pdf (15 pages, 1056428 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
+ 604 PDF objects out of 1000 (max. 8388607)
  90 named destinations out of 1000 (max. 500000)
  132 words of extra memory for PDF output out of 10000 (max. 10000000)
 
