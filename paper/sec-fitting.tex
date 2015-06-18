@@ -1,6 +1,215 @@
 
 \section{Fitting methodology}
+\label{sec:fitting}
 
-Here we discuss the fitting methodology, the sum rules,
+In this section we discuss the fitting methodology, including, the sum rules,
 the flavor decomposition, positivity, the parameterization
-of nuclear PDFs as ratios etc
+of nuclear PDFs as ratios and similar
+
+\subsection{Nuclear PDF parametrizations}
+
+In this work we want to determine the PDFs of bound nucleons that for a lead
+nucleus
+%
+Since nuclear-induced modifications of the free-nucleon PDF are known to be moderate,
+it is advantageous from the methodological point of view to express the
+lead PDFs $q_{i}^{\rm Pb}(x,Q^2)$ as follows
+\be
+\label{eq:param}
+q_{i}^{\rm Pb}(x,Q^2) \equiv R_i(x,Q^2) \cdot q_{i}^{\rm p}(x,Q^2) \, , \quad i=-n_f,\ldots,n_f \, ,
+\ee
+where $q_{i}^{\rm p}(x,Q^2)$ are the free proton PDFs and $R^{\rm Pb}_i(x,Q^2)$
+is the nuclear modification factor of lead nuclei that we want to extract from the data.
+%
+In the absence of nuclear effects $R^{\rm Pb}_i(x,Q^2)=1$.
+%
+The number of active quark flavors in the variable-flavor-number
+scheme that we use is denoted by $n_f$, and the flavor index $i=0$ corresponds
+to the gluon PDF.
+%
+Thanks to the conversion strategy presented in Sect.~\ref{sec:conversion},
+we express all available DIS nuclear data in terms of lead structure functions,
+and therefore the fitting is simplified since we don't need to extract
+the dependence of the nuclear modification factor $R^{\rm A}_i(x,Q^2)$ on the atomic
+mass number $A$.
+
+
+The nuclear modification factors of lead $R^{\rm Pb}_i(x,Q^2)$ are parametrized at the
+input evolution scale $Q_0=1$ GeV with a feed-forward artificial neural network,
+as customary in the NNPDF fits
+\be
+\label{eq:nn}
+R^{\rm Pb}_i(x,Q^2_0) = {\rm NN}_i(x) \, .
+\ee
+with no further preprocessing terms.
+%
+This is another advantage of parametrising of the lead PDFs
+as ratios with respect the proton PDFs, Eq.~(\ref{eq:param}): no preprocessing
+is required in $R^{\rm Pb}_i(x,Q^2_0)$, since to first approximation the leading
+physical behavior, such as the vanishing of the PDFs in the elastic limit
+$x\to 0$ or their power-like rise at small-$x$ is already present
+in the baseline proton PDFs used.
+%
+The architecture of the neural network in Eq.~(\ref{eq:nn}) is 2-5-3-1,
+with the two input neurons taking as input $x$ and  $\ln x$ respectively.
+%
+All layers use a sigmoid activation function except for the final layer
+which is based on a linear activation function, to avoid bounding the output
+of the neural network.
+
+Once the fit determines the shape of $R^{\rm Pb}_i(x,Q^2_0)$, it is used to
+reconstruct the lead PDFs at the input evolution scale
+\be
+\label{eq:param3}
+q_{i}^{\rm Pb}(x,Q^2_0) \equiv R_i(x,Q^2_0) \cdot q_{i}^{\rm p}(x,Q^2_0) \, ,
+\ee
+which is then evolved upwards in $Q^2$ using the NLO or NNLO DGLAP
+evolution equations using the {\tt APFEL} program~\cite{Bertone:2013vaa}.
+%
+At scales other than $Q_0$ the nuclear modification factor will
+thus defined as
+\be
+ R_i(x,Q^2) = \frac{q_{i}^{\rm Pb}(x,Q^2) }{q_{i}^{\rm p}(x,Q^2)} \, ,
+\ee
+where of course exactly the same theory settings  such as solution
+of the DGLAP equations and the values of the heavy quark
+masses must be used consistently in the evolution
+of the lead and of the proton PDFs.
+
+
+\subsection{Flavor decomposition and theoretical settings}
+
+We will parametrize the nuclear modification factors below the charm threshold,
+so in principle we should parametrize seven $R_i$, three for each
+flavor of quark, three for the antiquarks, and the gluon.
+%
+Heavy quarks are generated radiately using the DGLAP evolution equations.
+%
+However, we are fitting only a single observable
+\be
+\label{eq:ratio}
+\frac{F_2^{\rm Pb}(x,Q^2)}{F_2^{\rm d}(x,Q^2)}
+\ee
+so we cannot determine independently all $R_i$, but need to take some flavor
+assumptions.
+%
+To see which PDF combinations can be probed by the data Eq.~(\ref{eq:ratio}) in the fit,
+let us write the leading order expression at the input parametrization scale,
+and we have
+\be
+\label{eq:ratio2}
+\frac{F_2^{\rm Pb}(x,Q^2_0)}{F_2^{\rm d}(x,Q^2_0)}\Bigg|_{\rm LO}=
+\frac{ \lp  (3Z+A)(u+\bar{u})^{\rm Pb}/A + (4A-3Z)(d+\bar{d})^{\rm Pb}/A+
+ (s+\bar{s})^{\rm Pb}\rp/9 }{\lp 5(u+\bar{u}+d+\bar{d})^{\rm p} + 2(s+\bar{s})^{\rm p}\rp/18} \, ,
+\ee
+where $Z$ and $A$ are the atomic and mass numbers of lead respectively, and where the
+deuteron structure function has been expressed in terms of the free proton PDFs
+neglecting nuclear effects for the $A=2$ case.
+%
+
+It is easy to see that Eq.~(\ref{eq:ratio2}) in the case $Z\simeq A/2$ simplifies
+substantially to
+\be
+\label{eq:ratio3}
+\frac{F_2^{\rm Pb}(x,Q^2_0)}{F_2^{\rm d}(x,Q^2_0)}\Bigg|_{\rm LO}=
+\frac{ \lp  5(u+\bar{u}+d+\bar{d})^{\rm Pb}+
+ 2(s+\bar{s})^{\rm Pb}\rp/9 }{\lp 5(u+\bar{u}+d+\bar{d})^{\rm p} + 2(s+\bar{s})^{\rm p}\rp} \, ,
+\ee
+and we see therefore that at leading order, fitting only fixed target neutral
+current DIS nuclear observables, we are only sensitive to a single
+quark combination
+\be
+\Sigma^{\rm d}(x,Q_0) \equiv \lp 5(u+\bar{u}+d+\bar{d})^{\rm p} + 2(s+\bar{s})^{\rm p}\rp(x,Q_0^2) \ ,
+\ee
+which is the sum of quark PDFs, weighted by their electric charge, for NC DIS
+off an isoscalar target.
+%
+In reality we are also sensitive to $T_3\equiv ( u+\bar{u} - d-\bar{d})$, the difference
+between the up-type and down-type quarks, since lead is not exactly an isoscalar
+nucleus, but as we will show below the constraints on $T_3$, and
+thus on flavor separation are really weak.
+%
+At NLO and NNLO, we also have indirect constraints on the gluon nuclear modifications
+both from the higher order corrections and from the DGLAP evolution effects.
+%
+As expected, these constraints are weak in NC fixed-target DIS resulting in large
+uncertainties for the gluon nuclear modifications in lead.
+
+Taking into account the above discussion, in this work we will parametrize
+using neural networks two nuclear modification factors
+\begin{itemize}
+\item The quark singlet
+  $R_{\sigma}(x,Q_0) \equiv  \Sigma^{\rm Pb}(x,Q_0) / \Sigma^{\rm p}(x,Q_0)\,$ ,
+\item The gluon
+   $R_{g}(x,Q_0) \equiv  g^{\rm Pb}(x,Q_0) / g^{\rm p}(x,Q_0)\,$ ,
+\end{itemize}
+and for cross-checks we will also attempt to extract
+the nuclear modification factor of the isotriplet PDF
+$R_{T_3}(x,Q_0) \equiv  T_3^{\rm Pb}(x,Q_0) / T_3^{\rm p}(x,Q_0)$.
+
+
+In this work, structure functions are computed using the FONLL
+general-mass variable-flavor-number (GM-VFN) scheme that
+includes the effect of the charm mass into the massless calculation.
+%
+In particular we will use FONLL-B for the NLO fits and FONLL-C
+for the NNLO fits.
+%
+PDF evolution and structure functions will be computed at NLO and at NNLO
+using the {\tt APFEL} program.
+%
+Unless otherwise specified, the theoretical settings are the same
+as in the NNPDF3.0 paper, in particular the fit uses values of the heavy
+quark (pole) masses of $m_c=1.275$ GeV and $m_b=4.18$ GeV.
+%
+The maximum number of active quark flavors allowed in the structure
+functions is $n_f=5$.
+%
+We would like to emphasize that
+this is the first nuclear fit that has been performed
+up to NNLO accuracy, and also the first fit that includes heavy quark mass effects
+in the DIS coefficient functions.
+%
+While these two effects are likely to be smaller than the typical
+nuclear PDF uncertainties, specially in the kinematic region
+covered by available data, it is important to derive for
+instance consistent predictions at NNLO for observables
+in $pPb$ collisions.
+
+
+
+
+\subsection{Fitting strategy}
+
+The fitting strategy used in this works follows closely that
+used in the NNPDF3.0 proton PDF analysis~\cite{Ball:2014uwa}.
+%
+We thus discuss here those ingredients that are different as compared
+to the NNPDF3.0 case.
+%
+To begin with, the fraction of points used in the cross-validation
+algorithm has been reduced from 50\% to 20\%.
+%
+Implementing cross-validation is particularly important in this
+case since we basically have a single observable, the ratio
+$F_2^{\rm Pb}/F_2^{\rm d}$, and thus the possibility of over-fitting should
+be carefully avoided.
+%
+Using a 20\% fraction in the validation set is enough to obtain
+a representative sample of the dataset without removing too much
+experimental information from the training set, given that
+in the nuclear case the dataset is much smaller as compared to the
+proton PDF fits.
+
+The $\chi^2$ minimized by the Genetic Algorithm is based on the $t_0$
+method~\cite{Ball:2009qv,Ball:2012wy}, in order to avoid the D'Agostini bias in the presence of
+multiplicative correlated systematic uncertainties.
+%
+While as discussed in Sect.~\ref{sec:expdata}, since the experimental
+covariance matrix is not available, we add statistical and systematic
+uncertainties in quadrature, we still have a correlated multiplicative
+systematic which comes from the PDF uncertainty in the conversion factor,
+which must thus be treated in the fit using the $t_0$ prescription.
+
+
+
