@@ -1,5 +1,12 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}
-\BOOKMARK [1][-]{section.2}{Dataset}{}
-\BOOKMARK [1][-]{section.3}{Compression of nuclear data to lead structure functions}{}
-\BOOKMARK [1][-]{section.4}{Fitting methodology}{}
-\BOOKMARK [1][-]{section.5}{Results}{}
+\BOOKMARK [1][-]{section.2}{Experimental data}{}
+\BOOKMARK [2][-]{subsection.2.1}{Nuclear DIS structure functions data}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Conversion of nuclear data to lead structure functions}{section.2}
+\BOOKMARK [1][-]{section.3}{Fitting methodology}{}
+\BOOKMARK [2][-]{subsection.3.1}{Nuclear PDF parametrizations}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Flavor decomposition and theoretical settings}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Fitting strategy}{section.3}
+\BOOKMARK [1][-]{section.4}{Results}{}
+\BOOKMARK [2][-]{subsection.4.1}{NNPDFnucl1.0}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Dependence of the nuclear PDF set used for the conversion}{section.4}
+\BOOKMARK [1][-]{section.5}{Summary and outlook}{}
